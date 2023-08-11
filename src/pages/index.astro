@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Timer from '../components/Timer.svelte'
+import Letters from '../components/Letters.svelte'
+import KeyReader from '../components/KeyReader.svelte'
+import UsedKeys from '../components/UsedKeys.svelte'
+import SuccessDialog from '../components/SuccessDialog.svelte'
+import Hangman from '../components/Hangman.svelte'
+---
+
+<Layout title="Spin the Wheel!">
+	<main class="container">
+			
+
+			<h1 class="text-gradient">Spin the Wheel</h1>
+			<div class="grid">
+			<div>
+				<Timer client:only/>
+			</div>
+			<div style="padding: 2em;">
+				<Hangman client:only/>
+			</div>
+			</div>
+
+			<Letters client:only/>
+
+
+			<SuccessDialog client:only/>
+			<section>
+			<UsedKeys client:only/>
+			</section>
+			<KeyReader client:only/>
+	</main>
+</Layout>

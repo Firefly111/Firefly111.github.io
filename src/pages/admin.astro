@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AdminInput from "../components/AdminInput.svelte"
+import Prompt from "../components/Prompt.svelte";
+import Timer from "../components/Timer.svelte";
+import AdminNameStore from "../components/AdminNameStore.svelte";
+---
+
+<Layout title="STW Admin">
+    <main class="container">
+        <!--<h4 class="text-gradient">Spin the wheel Admin</h4>-->
+            <Prompt client:only/>
+            <Timer client:only/>
+			<AdminInput client:only/>
+			<AdminNameStore client:only/>
+    </main>
+</Layout>
